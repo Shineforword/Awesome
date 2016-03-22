@@ -11,6 +11,7 @@ import MJRefresh
 
 class BaseCollectionController: GirlBaseUIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     var collectionView:UICollectionView?
+    var items:NSMutableArray?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +22,11 @@ class BaseCollectionController: GirlBaseUIViewController, UICollectionViewDataSo
         self.collectionView?.delegate = self
         self.collectionView?.dataSource = self
         //注册集合视图
-        self.collectionView?.registerClass(PhotosCell.self, forCellWithReuseIdentifier: "baseCollectionCell")
+        self.collectionView?.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "baseCollectionCell")
         self.collectionView?.backgroundColor = UIColor.whiteColor()
         self.view.addSubview(collectionView!)
         
-        
+        self.items = NSMutableArray()
         //下拉刷新
         self.collectionView?.mj_header = MJRefreshNormalHeader.init(refreshingBlock: { () -> Void in
             //
@@ -57,7 +58,7 @@ class BaseCollectionController: GirlBaseUIViewController, UICollectionViewDataSo
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
        
-        return 10
+        return self.items!.count
         
     }
     
@@ -92,10 +93,6 @@ class BaseCollectionController: GirlBaseUIViewController, UICollectionViewDataSo
     
     
     
-    
-    
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

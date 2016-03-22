@@ -37,7 +37,7 @@ class GirlNavigationController: UINavigationController {
         backButton.setImage(image, forState: .Normal)
         backButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         backButton.titleLabel?.font = UIFont.systemFontOfSize(12)
-        
+        backButton.addTarget(self, action: "popself", forControlEvents: .TouchUpInside)
         //定制自己风格的UIBarButtonItem
         let barButtonItem = UIBarButtonItem.init(customView: backButton)
         
@@ -60,13 +60,13 @@ class GirlNavigationController: UINavigationController {
             self.interactivePopGestureRecognizer?.enabled = true
             self.interactivePopGestureRecognizer?.delegate = nil
         }
-        //禁用iOS 7 返回手势
-        if ((viewController.navigationController?.respondsToSelector("interactivePopGestureRecognizer")) != nil)
-        {
-            
-            viewController.navigationController?.interactivePopGestureRecognizer?.enabled = false
-            
-        }
+//        //禁用iOS 7 返回手势
+//        if ((viewController.navigationController?.respondsToSelector("interactivePopGestureRecognizer")) != nil)
+//        {
+//            
+//            viewController.navigationController?.interactivePopGestureRecognizer?.enabled = false
+//            
+//        }
         
     }
     override func didReceiveMemoryWarning() {

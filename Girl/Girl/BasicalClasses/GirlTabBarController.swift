@@ -26,7 +26,7 @@ class GirlTabBarController: UITabBarController {
     func addAllChildVC(){
        
         //首页
-        let homePageVC = BaseCollectionController()
+        let homePageVC = HomePageController()
         self.addOneChildVC(homePageVC, title: "Home", imageName: "tab_home", selectImageName: "tab_home_pre")
         
         //进阶

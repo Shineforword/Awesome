@@ -10,6 +10,8 @@ import UIKit
 
 class PhotosCell: UICollectionViewCell {
     
+
+    var photoDic:NSDictionary?
     var imgView : UIImageView?
     var titleLabel:UILabel?
     
@@ -18,12 +20,11 @@ class PhotosCell: UICollectionViewCell {
         //初始化各种控件
         imgView = UIImageView(frame: CGRectMake(0, 0, frame.width, frame.height - 15))
         self.addSubview(imgView!)
-        titleLabel = UILabel(frame: CGRectMake(0, CGRectGetMaxY(imgView!.frame)-10, frame.width, 10))
+        titleLabel = UILabel(frame: CGRectMake(5, CGRectGetMaxY(imgView!.frame)+5, frame.width-10, 10))
         titleLabel?.numberOfLines = 0
         titleLabel?.font = UIFont.boldSystemFontOfSize(12.0)
         titleLabel?.textColor = UIColor.lightGrayColor()
         self .addSubview(titleLabel!)
-  
     }
     required init(coder aDecoder: NSCoder)
     {
