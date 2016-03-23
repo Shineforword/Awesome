@@ -34,18 +34,18 @@ class PhotoDetailController: BaseCollectionController {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("baseCollectionCell", forIndexPath: indexPath)as!PhotosCell
         let tempDic = self.items?.objectAtIndex(indexPath.row) as? NSDictionary
-        let imageUrl = "http://tnfs.tngou.net/img" + (tempDic?.objectForKey("src")as?String)!
+        let imageUrl = GIRLS_HOST_DETAIL + (tempDic?.objectForKey("src")as?String)!
         cell.imgView!.setWebImage(imageUrl)
         cell.titleLabel?.text = tempDic?.objectForKey("title") as? String
         return cell
     }
     override func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize
     {
-        return CGSizeMake(self.view.frame.width/2-10, self.view.frame.width/1.5)
+        return CGSizeMake(SCREEN_WIDTH/2-W(10.0), SCREEN_WIDTH/1.5)
     }
     //最小列间距
     override func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 10.0
+        return W(10.0)
     }
 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
@@ -69,7 +69,7 @@ class PhotoDetailController: BaseCollectionController {
         
         //模型数据数组
         for (var i=0; i<self.items?.count; i++){
-            let Url = "http://tnfs.tngou.net/img" + ((self.items?.objectAtIndex(i).objectForKey("src"))! as! String)
+            let Url = GIRLS_HOST_DETAIL + ((self.items?.objectAtIndex(i).objectForKey("src"))! as! String)
             
             let imageView = UIImageView.init()
             imageView.setWebImage(Url)
@@ -91,7 +91,7 @@ class PhotoDetailController: BaseCollectionController {
         let manager = HTTPRequestManager()
         manager.dataRequest(
             method: HTTPRequestManager.Method.GET,
-            urlString: "http://apis.baidu.com/tngou/gallery/show",
+            urlString: GIRLS_HOST_SHOW,
             parameter:
             [
                 "id": (detailDic?.objectForKey("id") as! NSNumber),

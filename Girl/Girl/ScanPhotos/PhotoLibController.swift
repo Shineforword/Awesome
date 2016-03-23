@@ -35,6 +35,7 @@ class PhotoLibController: BaseCollectionController {
         self.getLibruaryDataSource()
         self.collectionView?.mj_footer.endRefreshing()
 
+        
 
     }
     
@@ -43,14 +44,14 @@ class PhotoLibController: BaseCollectionController {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("baseCollectionCell", forIndexPath: indexPath)as!PhotosCell
         let tempDic = self.items?.objectAtIndex(indexPath.row) as? NSDictionary
-        let imageUrl = "http://tnfs.tngou.net/img" + (tempDic?.objectForKey("img")as?String)!
+        let imageUrl = GIRLS_HOST_DETAIL + (tempDic?.objectForKey("img")as?String)!
         cell.imgView!.setWebImage(imageUrl)
         cell.titleLabel?.text = tempDic?.objectForKey("title") as? String
         return cell
     }
     override func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize
     {
-        return CGSizeMake(self.view.frame.width/2-10, self.view.frame.width/1.5)
+        return CGSizeMake(SCREEN_WIDTH/2-W(10), SCREEN_WIDTH/1.5)
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
@@ -64,7 +65,7 @@ class PhotoLibController: BaseCollectionController {
         let manager = HTTPRequestManager()
         manager.dataRequest(
             method: HTTPRequestManager.Method.GET,
-            urlString: "http://apis.baidu.com/tngou/gallery/list",
+            urlString: GIRLS_HOST_LIST,
             parameter:
             [
                 "id": (severDic?.objectForKey("id") as? String)!,

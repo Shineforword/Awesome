@@ -49,7 +49,7 @@ class GirlTabBarController: UITabBarController {
         childVC.tabBarItem.title = title
         childVC.navigationItem.title = title;
         childVC.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.blackColor()], forState: .Normal)
-        childVC.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.colorWithRGB(33, g: 198, b: 200, a: 1.0)], forState: .Selected)
+        childVC.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName : BASE_COLOR], forState: .Selected)
         //设置图标
         childVC.tabBarItem.image = UIImage.init(named: imageName)
         //改变系统,显示原色

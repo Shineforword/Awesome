@@ -133,6 +133,8 @@
 		B477609A1CA1A980005127EB /* NVActivityIndicatorAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47760561CA1A980005127EB /* NVActivityIndicatorAnimationDelegate.swift */; };
 		B477609B1CA1A980005127EB /* NVActivityIndicatorShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47760571CA1A980005127EB /* NVActivityIndicatorShape.swift */; };
 		B477609C1CA1A980005127EB /* NVActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47760591CA1A980005127EB /* NVActivityIndicatorView.swift */; };
+		B47CBF371CA233F200C25A95 /* GirlPublic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47CBF361CA233F200C25A95 /* GirlPublic.swift */; };
+		B47CBF391CA23A7500C25A95 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47CBF381CA23A7500C25A95 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -269,6 +271,8 @@
 		B47760571CA1A980005127EB /* NVActivityIndicatorShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorShape.swift; sourceTree = "<group>"; };
 		B47760581CA1A980005127EB /* NVActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVActivityIndicatorView.h; sourceTree = "<group>"; };
 		B47760591CA1A980005127EB /* NVActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorView.swift; sourceTree = "<group>"; };
+		B47CBF361CA233F200C25A95 /* GirlPublic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GirlPublic.swift; sourceTree = "<group>"; };
+		B47CBF381CA23A7500C25A95 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		B84F2BEC2CF524392BD01F80 /* Pods-Girl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Girl.release.xcconfig"; path = "Pods/Target Support Files/Pods-Girl/Pods-Girl.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -344,6 +348,8 @@
 			isa = PBXGroup;
 			children = (
 				B4775F8B1CA11F69005127EB /* UIColor+Extension.swift */,
+				B47CBF381CA23A7500C25A95 /* UIView+Extension.swift */,
+				B47CBF361CA233F200C25A95 /* GirlPublic.swift */,
 				B4775FE21CA1A852005127EB /* PhotoBrowser */,
 				B4775FD91CA18D2E005127EB /* ImageDownload */,
 				B4775FCB1CA1525A005127EB /* Network */,
@@ -848,6 +854,8 @@
 				B477608A1CA1A980005127EB /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
 				B47760821CA1A980005127EB /* NVActivityIndicatorAnimationBallPulse.swift in Sources */,
 				B4775FFE1CA1A853005127EB /* PhotoBrowser+ZoomAnim.swift in Sources */,
+				B47CBF371CA233F200C25A95 /* GirlPublic.swift in Sources */,
+				B47CBF391CA23A7500C25A95 /* UIView+Extension.swift in Sources */,
 				B477605A1CA1A980005127EB /* CFSnapKit.swift in Sources */,
 				B47760911CA1A980005127EB /* NVActivityIndicatorAnimationLineScale.swift in Sources */,
 				B477608C1CA1A980005127EB /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */,

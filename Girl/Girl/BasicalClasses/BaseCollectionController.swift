@@ -17,7 +17,7 @@ class BaseCollectionController: GirlBaseUIViewController, UICollectionViewDataSo
         super.viewDidLoad()
         //设置布局
         let Layout = UICollectionViewFlowLayout()
-        self.collectionView = UICollectionView(frame:CGRectMake(0, 0, self.view.frame.width, self.view.frame.height), collectionViewLayout: Layout)
+        self.collectionView = UICollectionView(frame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT), collectionViewLayout: Layout)
         //设置代理
         self.collectionView?.delegate = self
         self.collectionView?.dataSource = self
@@ -73,22 +73,22 @@ class BaseCollectionController: GirlBaseUIViewController, UICollectionViewDataSo
     //最小行间距
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
         
-        return 10.0
+        return H(10.0)
     }
     //最小列间距
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 20.0
+        return H(20.0)
     }
     //上下左右的间距
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
         
-        return UIEdgeInsetsMake(5, 5, 5, 5)
+        return UIEdgeInsetsMake(W(5),H(5), W(5), H(5))
         
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
-        return CGSizeMake(self.view.frame.width/2 - 10, self.view.frame.width/2)
+        return CGSizeMake(SCREEN_WIDTH/2 - W(10.0), SCREEN_WIDTH/2)
     }
     
     
