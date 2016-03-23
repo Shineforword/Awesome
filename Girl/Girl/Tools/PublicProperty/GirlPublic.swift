@@ -24,10 +24,11 @@ let SCREEN_WIDTH  = UIScreen.mainScreen().bounds.size.width
 /** 设备的高*/
 let SCREEN_HEIGHT = UIScreen.mainScreen().bounds.size.height
 
-/** 等比放大*/
+/** 等比高放大*/
 func H(H:CGFloat)-> CGFloat  {
     return UIView.setHeight(H)
 }
+/** 等比宽放大*/
 func W(W:CGFloat)-> CGFloat  {
     return UIView.setWidth(W)
 }

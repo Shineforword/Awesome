@@ -73,11 +73,11 @@ class BaseCollectionController: GirlBaseUIViewController, UICollectionViewDataSo
     //最小行间距
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
         
-        return H(10.0)
+        return H(5.0)
     }
     //最小列间距
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return H(20.0)
+        return H(10.0)
     }
     //上下左右的间距
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
