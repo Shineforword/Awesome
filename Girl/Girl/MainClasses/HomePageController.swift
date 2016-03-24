@@ -37,10 +37,10 @@ class HomePageController: GirlBaseUIViewController ,ChildrenViewProtcol ,Childre
         
         // Do any additional setup after loading the view.
     }
-    //闭包函数指针
+    
+    //执行动作的函数:与包函数同参同返回值
     func packageFunctionThatTakeClosure(color:UIColor) ->Void
     {
-        
         // function body goes here
         self.package?.backgroundColor = color
         
@@ -54,9 +54,9 @@ class HomePageController: GirlBaseUIViewController ,ChildrenViewProtcol ,Childre
     
     func gotoNextController() {
         let testVC = TestController()
-        /*
-         *将当前someFunctionThatTakesAClosure函数指针传到第二个界面，
-         *第二个界面的闭包拿到该函数指针后会进行回调该函数*/
+        /*将当前packageFunctionThatTakeClosure函数指针传到第二个界面，
+         *第二个界面的闭包拿到该函数指针后会进行回调该函数
+         */
         testVC.initWithClosure(packageFunctionThatTakeClosure)
         self.navigationController?.pushViewController(testVC, animated: true)
     }

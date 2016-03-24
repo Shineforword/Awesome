@@ -7,6 +7,7 @@
 //
 
 import UIKit
+/** 模型与实现写在同一个文件中:使用extension或许更加方便*/
 /** 继承自NSObjectProtocol协议,需要全部实现代理方法*/
  protocol ChildrenViewProtcol:NSObjectProtocol
 {
@@ -92,7 +93,7 @@ class ChildrenView: UIView {
             let canDo = delegate!.respondsToSelector("gotoChangeViewColor:")
             
             if canDo{
-                
+                //代理的反向传值
                 self.titleLabel?.textColor = UIColor.randomColor()
                 self.goButton?.backgroundColor = UIColor.randomColor()
                 self.backgroundColor = UIColor.randomColor()

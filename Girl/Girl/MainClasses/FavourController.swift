@@ -59,16 +59,23 @@ class FavourController: GirlBaseUIViewController, UITableViewDataSource, UITable
     {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("mineCell", forIndexPath: indexPath)
+        
+        
         cell.textLabel?.text = self.items?.objectAtIndex(indexPath.row).objectForKey("name") as? String
+
         cell.accessoryType = .DisclosureIndicator
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
+        
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
         let libVC = PhotoLibController()
+        
         libVC.severDic = self.items?.objectAtIndex(indexPath.row) as? NSDictionary
+        
         self.navigationController?.pushViewController(libVC, animated: true)
         
     }

@@ -52,6 +52,7 @@ class PhotoDetailController: BaseCollectionController {
         
         self.showHost(indexPath.row)
     }
+   
     /** 网络相册相册 */
     func showHost(index: Int){
         

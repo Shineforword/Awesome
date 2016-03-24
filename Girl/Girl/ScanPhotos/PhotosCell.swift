@@ -19,11 +19,14 @@ class PhotosCell: UICollectionViewCell {
         super.init(frame: frame)
         //初始化各种控件
         imgView = UIImageView(frame: CGRectMake(0, 0, frame.width, frame.height - 15))
+        imgView?.clipsToBounds = true
+        imgView?.layer.cornerRadius = 5
         self.addSubview(imgView!)
         titleLabel = UILabel(frame: CGRectMake(5, CGRectGetMaxY(imgView!.frame)+5, frame.width-10, 10))
         titleLabel?.numberOfLines = 0
-        titleLabel?.font = UIFont.boldSystemFontOfSize(12.0)
-        titleLabel?.textColor = UIColor.lightGrayColor()
+        titleLabel?.font = UIFont.systemFontOfSize(10.0)
+        titleLabel?.textAlignment = .Center
+        titleLabel?.textColor = BASE_COLOR
         self .addSubview(titleLabel!)
     }
     required init(coder aDecoder: NSCoder)

@@ -19,6 +19,10 @@ let GIRLS_HOST_SHOW   = "http://apis.baidu.com/tngou/gallery/show"
 /** 查看图片详情*/
 let GIRLS_HOST_DETAIL = "http://tnfs.tngou.net/img"
 
+/** 花瓣*/
+let FLOWER_HOST = "http://api.huaban.com/fm/wallpaper/pins"
+
+
 /** 设备的宽*/
 let SCREEN_WIDTH  = UIScreen.mainScreen().bounds.size.width
 /** 设备的高*/

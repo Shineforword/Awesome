@@ -8,7 +8,7 @@
 
 import UIKit
 
-/** 闭包*/
+/** 闭包:定义一个包()*/
 typealias sendValueClosure = (color : UIColor)->()
 
 class TestController: UIViewController,ChildrenViewProtcol{
@@ -32,9 +32,10 @@ class TestController: UIViewController,ChildrenViewProtcol{
         // Do any additional setup after loading the view.
     }
 
-    //ChildrenViewProtcol-Delegate
+    //ChildrenViewProtcol-Delegate(继承自NSObjectProtocol的协议需要实现所有协议方法)
     
     func gotoChangeViewColor(color:UIColor){
+    
     }
     
     func gotoNextController() {
@@ -44,7 +45,7 @@ class TestController: UIViewController,ChildrenViewProtcol{
     func defaultAction() {
         
         if (myClosure != nil) {
-            //闭包隐式调用someFunctionThatTakesAClosure函数：回调。
+            //闭包隐式调用函数->回调执行上一界面的someFunctionThatTakesAClosure。
             myClosure!(color: UIColor.randomColor())
         }
         self.navigationController?.popViewControllerAnimated(true)
@@ -53,7 +54,7 @@ class TestController: UIViewController,ChildrenViewProtcol{
     //
     func initWithClosure(closure:sendValueClosure?)
     {
-        //将函数指针赋值给myClosure闭包
+        //将上个界面函数指针赋值给myClosure闭包
         myClosure = closure
         
     }

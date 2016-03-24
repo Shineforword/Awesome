@@ -137,6 +137,7 @@
 		B47CC0061CA2812000C25A95 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47CBFA91CA2812000C25A95 /* UIView+Extension.swift */; };
 		B47CC00B1CA283F600C25A95 /* ChildrenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47CC00A1CA283F600C25A95 /* ChildrenView.swift */; };
 		B47CC0101CA2A0CC00C25A95 /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47CC00F1CA2A0CC00C25A95 /* TestController.swift */; };
+		B4B1BFA51CA39D0900B95049 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B1BFA41CA39D0900B95049 /* UIImage+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -277,6 +278,7 @@
 		B47CBFA91CA2812000C25A95 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		B47CC00A1CA283F600C25A95 /* ChildrenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildrenView.swift; sourceTree = "<group>"; };
 		B47CC00F1CA2A0CC00C25A95 /* TestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
+		B4B1BFA41CA39D0900B95049 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		B84F2BEC2CF524392BD01F80 /* Pods-Girl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Girl.release.xcconfig"; path = "Pods/Target Support Files/Pods-Girl/Pods-Girl.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -624,6 +626,7 @@
 				B47CBFA11CA2812000C25A95 /* Network */,
 				B47CBFA81CA2812000C25A95 /* UIColor+Extension.swift */,
 				B47CBFA91CA2812000C25A95 /* UIView+Extension.swift */,
+				B4B1BFA41CA39D0900B95049 /* UIImage+Extension.swift */,
 				B47CBF9C1CA2812000C25A95 /* GirlPublic.swift */,
 			);
 			path = PublicProperty;
@@ -872,6 +875,7 @@
 				B47CBFEB1CA2812000C25A95 /* NVActivityIndicatorAnimationLineScale.swift in Sources */,
 				B4775F951CA12CE6005127EB /* ProgressController.swift in Sources */,
 				B47CBFD31CA2812000C25A95 /* UIView+Haneke.swift in Sources */,
+				B4B1BFA51CA39D0900B95049 /* UIImage+Extension.swift in Sources */,
 				B47CBFC51CA2812000C25A95 /* DiskFetcher.swift in Sources */,
 				B47CBFFE1CA2812000C25A95 /* DownloadImageManager.swift in Sources */,
 				B47CBFFD1CA2812000C25A95 /* DownloadImageExtensions.swift in Sources */,
@@ -1046,6 +1050,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Girl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "--.Girl";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1061,6 +1066,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Girl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "--.Girl";
 				PRODUCT_NAME = "$(TARGET_NAME)";
